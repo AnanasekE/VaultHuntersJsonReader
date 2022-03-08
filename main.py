@@ -21,7 +21,6 @@ def chestTesterGilded():
             g.write(j["name"] + '\n' + 'weight: ' + str(j['weight']) + 2 * '\n') or g.write(j['name'])
 
 
-
 def chestTesterNormal():
     trashPoolStart = '----------------------------------' + '\n' + 'Trash Pool: ' + 2 * '\n'
     resourcesPoolStart = '----------------------------------' + '\n' + 'Resources Pool: ' + 2 * '\n'
@@ -76,7 +75,7 @@ if chestType == 'normal':
     chestType = 'vaultchest'
 
 with open(
-        r'' + path + 'the_vault\loot_tables\chest\lvl' + str(lvl) + '/' + chestType + rarity + '.json') as f:
+        r'' + path + r'\data\the_vault\loot_tables\chest\lvl' + str(lvl) + '/' + chestType + rarity + '.json') as f:
     data = json.load(f)
 
 g = open(r'' + str(input('Input path to the txt file you want to save the file to: ')), 'w')
